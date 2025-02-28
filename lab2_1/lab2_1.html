@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8"> <!-- Встановлює кодування символів документа -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Налаштовує вікно перегляду для адаптивного дизайну -->
+    <title>Випадаюче меню</title> <!-- Встановлює назву веб-сторінки -->
+    <link rel="stylesheet" href="lab2_1.css"> <!-- Підключає зовнішній файл CSS для стилізації -->
+    <style>
+        @-webkit-keyframes fadeIn {
+            from {
+                -webkit-transform: rotate(0); /* Початкова позиція анімації */
+            }
+            to {
+                -webkit-transform: rotate(90deg); /* Кінцева позиція анімації */
+            }
+        }
+
+        @keyframes slideAndFade {
+            0% {
+                top: -100px; /* Початкова позиція оголошення */
+                opacity: 0; /* Початкова прозорість оголошення */
+            }
+            10% {
+                top: 10px; /* Позиція оголошення через 10% часу анімації */
+                opacity: 1; /* Прозорість оголошення через 10% часу анімації */
+            }
+            90% {
+                top: 10px; /* Позиція оголошення через 90% часу анімації */
+                opacity: 1; /* Прозорість оголошення через 90% часу анімації */
+            }
+            100% {
+                top: -100px; /* Кінцева позиція оголошення */
+                opacity: 0; /* Кінцева прозорість оголошення */
+            }
+        }  
+    </style>
+</head>
+<body>
+    <ul id="nav">
+        <li><a href="#">Мови</a> <!-- Основний пункт меню -->
+            <ul> <!-- Підменю -->
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">PHP</a></li>
+                <li><a href="#">JavaScript</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#" onclick="return false;">Браузери</a> <!-- Основний пункт меню з вимкненою дією посилання -->
+            <ul>
+                <li><a href="#">Chrome</a></li>
+                <li><a href="#">Opera</a></li>
+                <li><a href="#">IE</a></li>
+                <li><a href="#">Firefox</a></li>
+            </ul>
+        </li>
+        
+        <li><a href="#" onclick="return false;">Інші</a> <!-- Основний пункт меню з вимкненою дією посилання -->
+            <ul class="sub-menu">
+                <li><a href="#">Інструменти</a></li>
+                <li><a href="#">Ресурси</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="announcement">Тут могла би бути ваша реклама</div> <!-- Блок оголошення з анімацією -->
+</body>
+</html>
